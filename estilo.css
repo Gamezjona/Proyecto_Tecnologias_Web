@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: '';
+}
+
+body {
+    min-height: 150vh;
+    background: #f0faff;
+}
+
+.LoginForm{
+    max-width: 700px;
+    height: 700px;
+    margin: 0 50%;
+    margin: auto;
+    margin-top: 90px;
+    border-radius: 12px;
+    padding: 25px;    
+    background: #fff;
+    box-shadow: 0 5px 10px rgba( 0, 0, 0, 0.1 );
+    font-size: 1.1rem;
+}
+
+.LoginForm h2{
+    text-align: center;
+}
+
+.inputs{
+    height: 50px;
+    width: 90%;
+    margin: 7px 0;
+    border: 2px solid #dddddd9d;
+    padding: 0 15px;
+    font-size: 1rem;
+    color: #333;
+    border-radius: 8px;
+}
+
+.inputsCorto{
+    height: 50px;
+    margin: 6px 2px;
+    border: 1px solid #dddddd9d;
+    margin-right: 10px;
+    padding: 0 15px;
+    font-size: 1rem;
+    color: #333;
+    border-radius: 8px;
+}
+
+.listaGenero{
+    width: 90%;
+    list-style-type: none;
+}
+
+.listaGenero li{
+    float: left;
+    margin:10px 0;
+    margin-right: 30px;
+}
+.co{
+    accent-color: #dc3545;
+    margin-right: 5px;
+}
+
+#enviar{
+    transition: background-color 0.4s ease;
+    margin-top: 27px;
+    background-color: #dc3545;
+    color: #fff;
+    margin-left: 25px;
+}
+
+#enviar:hover{
+    background-color: #af71a5;
+}

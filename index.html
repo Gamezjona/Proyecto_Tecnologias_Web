@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Login</title>
+</head>
+<body>
+
+    <!-- Formulario -->
+    <section class="LoginForm">
+        <h2>Registro</h2>
+        <form action="">
+            Nombre completo <br>
+            <input class="inputs" type="text" placeholder="Ingresa tu nombre" required=""><br>
+            Correo Electronico <br>
+            <input class="inputs" type="email" name="" id="" placeholder="Email" required=""><br>
+            Numero de telefono
+            <input class="inputsCorto" type="text" maxlength="10" name="" id="" placeholder="Ingresa tu numero" pattern="[0-9]+" required="">
+            Fecha de nacimiento
+            <input class="inputsCorto" type="date" name="" id="" required=""><br>
+            Genero <br>
+            <ul class="listaGenero">
+                <li><input class="co" type="radio" name="genero" id="" checked>Masculino</li>
+                <li><input class="co" type="radio" name="genero" id=""> Femenino</li>
+                <li><input class="co" type="radio" name="genero" id="">Prefiero no decirlo</li>
+            </ul>
+            <br>
+            <br>          
+            Pais <br>
+            <select  class="inputs" name="pais" id="" required="">
+                <option hidden value="M" selected>Mexico</option>
+                <option value="U">USA</option>
+                <option value="C">Canada</option>
+            </select><br>
+            Contraseña <br>
+            <input class="inputs" type="password" name="" id="" placeholder="Contraseña" required=""><br>
+            Confirma contraseña <br>
+            <input class="inputs" type="password" name="" id="" placeholder="Confirma Contraseña" required=""> <br>
+            <input class="co" type="checkbox" name="" id="" required=""> Acepto los terminos y condiciones <br>
+            <input class="inputs" id="enviar" type="submit" value="Confirmar">
+        </form>
+        <!-- background: #dc3545; -->
+
+    </section>
+
+</body>
+</html>
