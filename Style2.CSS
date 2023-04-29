@@ -36,3 +36,20 @@ body{
     background: #fff;
     font-family: inherit;    
 }
+
+#enviar2{
+    transition: background-color 0.4s ease;
+}
+
+#regis{
+    transition: color 0.4s ease;
+    color: #fff;
+}
+
+#regis:hover{
+    color: #af71a5;
+}
+
+#enviar2:hover{
+    background-color: #af71a5;
+}
