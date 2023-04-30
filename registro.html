@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="principal.css">
+    <title>Login</title>
+</head>
+<body>
+
+    <header>
+        <div>
+            <h3>Hola</h3>
+        </div>
+        <nav>
+
+        </nav>
+    </header>
+
+    <!-- Formulario-->
+    <section class="LoginForm">
+        <h2>Registro</h2>
+        <form action="registrar.php" method="post">
+            Nombre completo <br>
+            <input class="inputs" name="nombre" type="text" placeholder="Ingresa tu nombre" required=""><br>
+            Correo electronico <br>
+            <input class="inputs" type="email" name="email" id="" placeholder="Email" required=""><br>
+            Numero de telefono
+            <input class="inputsCorto" type="text" maxlength="10" name="telefono" placeholder="Ingresa tu numero" pattern="[0-9]+" required="">
+            Fecha de nacimiento
+            <input class="inputsCorto" type="date" name="fechaNaci" id="" required=""><br>
+            Genero <br>
+            <ul class="listaGenero">
+                <li><input class="co" type="radio" name="genero" value="Masculino" id="">Masculino</li>
+                <li><input class="co" type="radio" name="genero" value="Femenino" id=""> Femenino</li>
+                <li><input class="co" type="radio" name="genero" value="Sin genero" id="" checked>Prefiero no decirlo</li>
+            </ul>
+            <br>
+            <br>          
+            Pais <br>
+            <select  class="inputs" name="pais" id="" required="">
+                <option value="Mexico" selected>MEXICO</option>
+                <option value="USA" >USA</option>
+                <option value="Canada" >CANADA</option>
+            </select><br>
+            Contraseña <br>
+            <input class="inputs" type="password" name="contraseña" placeholder="Contraseña" required=""><br>
+            Confirma contraseña <br>
+            <input class="inputs" type="password" name="contraseña2" id="" placeholder="Confirma Contraseña" required=""> <br>
+            <input class="co" type="checkbox" required=""> Acepto los terminos y condiciones <br>
+            <input class="inputs" id="enviar" type="submit" value="Confirmar">
+        </form>
+        <!-- background: #dc3545; -->
+
+    </section>
+
+</body>
+</html>

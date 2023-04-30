@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-weight: 400;
+    font-size: 16px;
+    background: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    /* position:fixed; */
+    height: 100px;
+    width: 100%;
+    background-color: saddlebrown;
+    margin-bottom: 1px;
+}
+
+section{
+    height: 700px;
+    width: 100%;
+    display: flex;
+}
+
+#apartado{
+    background-color: #fb5849; 
+    height: 100%;
+    flex-basis: 35%;
+}
+
+.carrusel{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    flex-basis: 65%;
+}
