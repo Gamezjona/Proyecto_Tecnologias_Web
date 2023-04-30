@@ -1,3 +1,3 @@
 <?php
-$con = mysqli_connect("localhost", "root", "" , "cafeteria");
-mysqli_set_charset($con, "utf8");
+$conexion = mysqli_connect("localhost", "root", "" , "cafeteria");
+mysqli_set_charset($conexion, "utf8");

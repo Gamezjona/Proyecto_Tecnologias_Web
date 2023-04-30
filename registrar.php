@@ -10,16 +10,20 @@ $pais = $_POST["pais"];
 $contraseña = $_POST["contraseña"];
 $contraseña2 = $_POST["contraseña2"];
 
-echo $nombre."<br>";
-echo $email."<br>";
-echo $telefon."<br>";
-echo $fecha."<br>";
-echo $genero."<br>";
-echo $pais."<br>";
-echo $contraseña."<br>";
-echo $contraseña2."<br>";
+$consulta = "SELECT nombreClinete FROM cliente WHERE nombreClinete = '$nombre'";
+$resultado=mysqli_query($conexion,$consulta);
+var_dump($resultado);
+$row  = mysqli_num_rows($resultado);//Numero de lineas 
 
 
 if($contraseña == $contraseña2){
-    header("Location: login.html");
+    if($row > 0){
+        header("Location: errorNombreRepetido.html");
+    }else {
+        $con = "INSERT INTO cliente VALUES (NULL,'$nombre','$email','$telefon','$fecha','$genero','$pais','$contraseña')";
+        $resultado=mysqli_query($conexion,$con);
+        header("Location: inicio.html");
+    }
+}else{
+    header("Location: errorContraseña.html");
 }
