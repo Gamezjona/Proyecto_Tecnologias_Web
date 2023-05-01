@@ -10,11 +10,10 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
-header{
-    /* position:fixed; */
+header {
     height: 100px;
     width: 100%;
-    background-color: saddlebrown;
+    background-color: rgb(19, 47, 139);
     margin-bottom: 1px;
 }
 
