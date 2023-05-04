@@ -27,13 +27,13 @@
     </section>
     <section id="comida">
         <!-- titulo comida -->
-        <div id="tituloComida"></div>
+        <div id="tituloComida"> Menu</div>
         <!-- carrucel -->
-        <section id="comidaCarrusel"></section>
+        <section id="comidaCarrusel">carrusel</section>
     </section>
     <section id="diseño">
         <!-- Titolo diseño -->
-        <div id="tituloDiseño"></div>
+        <div id="tituloDiseño">Diseñadores</div>
         <div id="diseñadores">
             <div class="parrafoD">
                 <h3>Sebastian Galindo</h3>
@@ -48,6 +48,7 @@
             </div>
         </div>
     </section>
+    <!-- Reservacion/Informacion -->
     <section id="reservacion">
         <div class="reservacionN">
             <div class="info">
@@ -59,17 +60,13 @@
             </div>
         </div>
         <div class="reservacionN">
-            <form action="" method="post">
+            <form class="formReserva" action="" method="post">
                 <h3>
                     Haga su reservacion
                 </h3>
                 <p>
-                    <input type="date" name="" id="">
-                    <input type="time" name="" id="">
-                </p>
-                <p>
                     <select name="" class="s">
-                        <option value="" selected>Tipo de alimento</option>
+                        <option value="" selected>Tipo de reservacion</option>
                         <option value="">Desayuno Completo</option>
                         <option value="">Desayuno</option>
                         <option value="">Comida Completa</option>
@@ -80,6 +77,10 @@
                         <option value="">Dia especial</option>
 
                     </select>
+                </p>
+                <p>
+                    <input class="s" type="date" name="" id="">
+                    <input class="s" type="time" name="" id="">
                 </p>
                 <p>
                     <select name="" class="s">
@@ -94,17 +95,52 @@
                         <option value="8">8</option>
                     </select>
                 </p>
-
                 <p>
-                    <input type="text" name="" id="" placeholder="Comentario">
+                    <select name="" class="s">
+                        <option value="" selected>Tipo de habitacion</option>
+                        <option value="1">Grande</option>
+                        <option value="2">Mediana</option>
+                        <option value="3">Chica</option>
+                        <option value="4">Premium</option>
+                    </select>
                 </p>
 
+                <p>
+                    <input class="s" id="comentario" type="text" name="" id="" placeholder="Comentario">
+                </p>
+
+                <p>
+                    <!-- <input class="s" type="submit" value="Hacer pedido"> -->
+                    <input class="s" type="button" value="Hacer pedido">
+                </p>
             </form>
         </div>
     </section>
+    <!-- Comidas mejores -->
+    <section id="mejores">
+        <div>
+            <h3>Mejores Productos</h3>
+            <ul>
+                <li>Comidas</li>
+                <li>Desayunos</li>
+                <li>Cenas</li>
+                <li>Dia especial</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>1</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+            <ul>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+            </ul>
+        </div>
+    </section>
     <section></section>
-    <section></section>
-    <h1>HOLAAA</h1>
 </body>
 
 </html>
