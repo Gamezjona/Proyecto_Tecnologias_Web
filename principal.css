@@ -70,7 +70,7 @@ section{
     background-color: pink;
     height: 300px;
     width: 95%;
-    justify-content: space-around
+    justify-content: space-around;
 }
 
 /* Diseño */
@@ -194,4 +194,21 @@ section{
 #mejores{
     background-color: rgb(112, 181, 236);
     flex-direction: column;
+}
+
+/* Referencias */
+
+#referencias{
+    background-color: violet;
+    height: 250px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pie{
+    background-color: #fff;
+    width: 80%;
+    margin: 5px;
+    height: 60%;
 }
