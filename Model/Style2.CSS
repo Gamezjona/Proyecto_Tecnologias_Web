@@ -16,12 +16,17 @@ body{
     max-width: 470px;
     width: 100%;
     border-radius: 12px;
-    background: #dc3545;
+    background: #088395;
     box-shadow: 0 5px 10px rgba( 0, 0, 0, 0.1 );
 }
 
 #form-login form {
     margin-top: 40px;
+}
+
+#form-login form h2{
+
+    color: #fff;
 }
 
 .inputs{
@@ -38,7 +43,7 @@ body{
 }
 
 #enviar2{
-    transition: background-color 0.4s ease;
+    transition: background-color 0.8s ease;
 }
 
 #regis{
@@ -47,9 +52,9 @@ body{
 }
 
 #regis:hover{
-    color: #af71a5;
+    color: #00FFCA;
 }
 
 #enviar2:hover{
-    background-color: #af71a5;
+    background-color: #00FFCA;
 }

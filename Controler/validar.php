@@ -11,7 +11,7 @@ $row2 = mysqli_num_rows($resultado2);
 echo $row2;
 
 if($row2 > 0){
-    header("Location: inicio.html");
+    header("Location: /View/inicio.html");
 }else{
-    header("Location: errorUsuario.html");
+    header("Location: /View/errorUsuario.html");
 }

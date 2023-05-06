@@ -1,5 +1,5 @@
 <?php
-include("conexion.php");
+include("/Controler/conexion.php");
 
 $nombre = $_POST["nombre"];
 $email = $_POST["email"];
@@ -18,12 +18,12 @@ $row  = mysqli_num_rows($resultado);//Numero de lineas
 
 if($contraseña == $contraseña2){
     if($row > 0){
-        header("Location: errorNombreRepetido.html");
+        header("Location: /View/errorNombreRepetido.html");
     }else {
         $con = "INSERT INTO cliente VALUES (NULL,'$nombre','$email','$telefon','$fecha','$genero','$pais','$contraseña')";
         $resultado=mysqli_query($conexion,$con);
-        header("Location: inicio.html");
+        header("Location: /View/inicio.html");
     }
 }else{
-    header("Location: errorContraseña.html");
+    header("Location: /View/errorContraseña.html");
 }
