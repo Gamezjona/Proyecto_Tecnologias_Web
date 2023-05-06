@@ -4,7 +4,7 @@ include("conexion.php");
 $nombre = $_POST['nombre2'];
 $email = $_POST['email2'];
 $contraseña = $_POST['contraseña3'];
-$consulta2 = "SELECT nombreClinete FROM cliente WHERE nombreClinete = '$nombre' AND emailCliente = '$email' AND contraseña = '$contraseña'";
+$consulta2 = "SELECT nombreCliente FROM cliente WHERE nombreCliente = '$nombre' AND emailCliente = '$email' AND contraseña = '$contraseña'";
 $resultado2=mysqli_query($conexion,$consulta2);
 $row2 = mysqli_num_rows($resultado2);
 

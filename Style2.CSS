@@ -1,10 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body{
     min-height: 100vh;
     background: #f0faff;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 16px;
-
 }
 
 #form-login{
@@ -14,23 +18,33 @@ body{
     margin-top: 5rem;
     padding: 20px 30px 120px;
     max-width: 470px;
+    min-width: 320p;
     width: 100%;
     border-radius: 12px;
-    background: #dc3545;
+    background: #088395;
     box-shadow: 0 5px 10px rgba( 0, 0, 0, 0.1 );
 }
 
 #form-login form {
     margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#form-login form h2{
+    color: #fff;
+    margin-bottom:15px ;
 }
 
 .inputs{
     height: 60px;
-    width: 440px;
+    width: 90%;
     outline: none;
     border: none;
-    margin-bottom: 23px;
     padding: 0 15px;
+    margin: 15px 0;
     font-weight: 400;
     border-radius: 8px;
     background: #fff;
@@ -38,7 +52,7 @@ body{
 }
 
 #enviar2{
-    transition: background-color 0.4s ease;
+    transition: background-color 0.8s ease;
 }
 
 #regis{
@@ -47,9 +61,9 @@ body{
 }
 
 #regis:hover{
-    color: #af71a5;
+    color: #00FFCA;
 }
 
 #enviar2:hover{
-    background-color: #af71a5;
+    background-color: #00FFCA;
 }

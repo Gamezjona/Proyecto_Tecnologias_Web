@@ -6,14 +6,13 @@
 
 body {
     min-height: 150vh;
-    background: #f0faff;
+    background: #088395;
 }
 
 
 .LoginForm{
     max-width: 700px;
-    height: 700px;
-    margin: 0 50%;
+    min-width: 320px;
     margin: auto;
     margin-top: 90px;
     border-radius: 12px;
@@ -21,6 +20,11 @@ body {
     background: #fff;
     box-shadow: 0 5px 10px rgba( 0, 0, 0, 0.1 );
     font-size: 1.1rem;
+}
+
+.LoginForm form{
+    display: flex;
+    flex-direction: column;
 }
 
 .LoginForm h2{
@@ -46,7 +50,7 @@ body {
     margin-right: 10px;
     padding: 0 15px;
     font-size: 1rem;
-    color: #333;
+    color: black;
     border-radius: 8px;
 }
 
@@ -61,18 +65,18 @@ body {
     margin-right: 30px;
 }
 .co{
-    accent-color: #dc3545;
+    accent-color: #068066;
     margin-right: 5px;
 }
 
 #enviar{
     transition: background-color 0.4s ease;
     margin-top: 27px;
-    background-color: #dc3545;
+    background-color: #0A4D68;
     color: #fff;
     margin-left: 25px;
 }
 
 #enviar:hover{
-    background-color: #af71a5;
+    background-color: #068066;
 }

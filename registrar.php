@@ -10,7 +10,7 @@ $pais = $_POST["pais"];
 $contraseña = $_POST["contraseña"];
 $contraseña2 = $_POST["contraseña2"];
 
-$consulta = "SELECT nombreClinete FROM cliente WHERE nombreClinete = '$nombre'";
+$consulta = "SELECT nombreCliente FROM cliente WHERE nombreCliente = '$nombre'";
 $resultado=mysqli_query($conexion,$consulta);
 var_dump($resultado);
 $row  = mysqli_num_rows($resultado);//Numero de lineas 
