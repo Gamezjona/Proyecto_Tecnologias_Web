@@ -160,11 +160,39 @@ section {
     width: 100%;
     height: 100%;
     flex-basis: 70%;
+    overflow: hidden;
+}
+
+.carrusel ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    height: 100%;
+    animation: slide 24s infinite alternate ease-in-out;
+}
+
+.carrusel ul li{
+    list-style-type: none;
+    width: 100%;
 }
 
 .carrusel img {
     width: 100%;
     height: 100%;
+}
+
+@keyframes slide{
+    0%{margin-left: 0%;}
+    20%{margin-left: 0%;}
+  
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+  
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+  
+    75%{margin-left: -300%;}
+    95%{margin-left: -300%;}
 }
 
 @media(max-width: 767px) {
@@ -223,7 +251,6 @@ section {
 }
 
 .nosotrosIn {
-    display: flex;
     background-color: #fb5849;
     align-items: center;
     justify-content: center;
@@ -232,15 +259,40 @@ section {
     margin: 15px;
 }
 
-.nosotrosIn img {
-    width: 100%;
-    height: 100%;
-}
-
 .nosotrosIn p {
     width: 70%;
 }
 
+#carrusel2{
+    overflow: hidden;
+}
+
+#carrusel2 ul{
+    display: flex; 
+    padding: 0;
+    width: 200%;
+    height: 100%;
+    animation: car 10s infinite alternate ease-in-out;
+}
+
+#carrusel2 ul li{
+    list-style-type: none;
+    width: 100%;
+}
+
+#carrusel2 img{
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes car{
+    0%{margin-left: 0%;}
+    40%{margin-left: 0%;}
+  
+    50%{margin-left: -100%;}
+    100%{margin-left: -100%;}
+}
+ 
 
 @media screen and (max-width: 767px) {
     #nosotros {
