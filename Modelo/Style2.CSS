@@ -38,6 +38,11 @@ body{
     margin-bottom:15px ;
 }
 
+#form-login form h2{
+
+    color: #fff;
+}
+
 .inputs{
     height: 60px;
     width: 90%;
