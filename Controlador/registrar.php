@@ -18,12 +18,12 @@ $row  = mysqli_num_rows($resultado);//Numero de lineas
 
 if($contraseña == $contraseña2){
     if($row > 0){
-        header("Location: errorNombreRepetido.html");
+        header("Location: ../Vista/errorNombreRepetido.html");
     }else {
         $con = "INSERT INTO cliente VALUES (NULL,'$nombre','$email','$telefon','$fecha','$genero','$pais','$contraseña')";
         $resultado=mysqli_query($conexion,$con);
-        header("Location: inicio.html");
+        header("Location: ../Vista/inicio.html");
     }
 }else{
-    header("Location: errorContraseña.html");
+    header("Location: ../Vista/errorContraseña.html");
 }

@@ -2,14 +2,13 @@
     margin: 0;
     padding: 0;
     font-family: none;
-    color: #fff;
-    font-family: '';
 }
 
 body {
+    color: white;
+    background-color: #05BFDB;
     font-weight: 400;
     font-size: 16px;
-    background: #fff;
     box-sizing: border-box;
 }
 
@@ -68,6 +67,12 @@ header nav ul li {
 
 header nav ul li a{
     transition: color 0.5s ease;
+    color: white;
+}
+
+
+header nav ul li a:visited{
+    color: white;
 }
 
 header nav ul li a:hover {
@@ -202,7 +207,6 @@ section {
     }
 
     #apartado {
-        background-color: #fb5849;
         flex-basis: 30%;
         flex-direction: row;
     }
@@ -246,25 +250,31 @@ section {
 
 /* Nosotros */
 
-#nosotros {
-    background-color: aqua;
-}
+/* #nosotros {
+    
+} */
 
 .nosotrosIn {
-    background-color: #fb5849;
+    height: 478px;
+}
+
+#infoNosotros{
+    color: black;
+    display: flex;
     align-items: center;
     justify-content: center;
-    height: 478px;
-    width: 100%;
-    margin: 15px;
+    font-size: 25px;
+    flex-basis: 40%;
 }
 
 .nosotrosIn p {
     width: 70%;
+    text-align: justify;
 }
 
 #carrusel2{
     overflow: hidden;
+    flex-basis: 50%;
 }
 
 #carrusel2 ul{
@@ -308,6 +318,10 @@ section {
     #nosotros {
         height: 400px;
     }
+
+    #infoNosotros{
+        font-size: 15px;
+    }
 }
 
 /* Comida */
@@ -325,27 +339,32 @@ section {
 }
 
 #comidaCarrusel {
+    display: flex;
     background-color: pink;
     height: 300px;
     width: 95%;
-    overflow: hidden;
 }
 
 #comidaCarrusel ul {
+    display: flex;
     width: 100%;
     height: 100%;
     list-style-type: none;
-    overflow: visible;
+    justify-content: space-around;
 }
 
 #comidaCarrusel ul li {
-    float: left;
     background-color: violet;
     height: 80%;
     width: 200px;
     margin-left: 20px;
     margin-top: 30px;
 }
+
+#comidaCarrusel ul li:hover{
+    background-color: #00FFCA;
+}
+
 
 /* Diseño */
 
@@ -548,7 +567,7 @@ section {
 }
 
 #menuMejores {
-    overflow: scroll;
+    overflow: hidden;
     background-color: springgreen;
     width: 80%;
     height: 50%;
