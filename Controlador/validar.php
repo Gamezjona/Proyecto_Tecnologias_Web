@@ -13,5 +13,5 @@ echo $row2;
 if($row2 > 0){
     header("Location: ../Vista/inicio.html");
 }else{
-    header("Location: ../Vista/errorUsuario.html");
+    header("Location: ../Vista/errorContraseña.html");
 }
