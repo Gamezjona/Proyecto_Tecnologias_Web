@@ -1,5 +1,5 @@
 <?php
-include("../Controler/conexion.php");
+include("../Controlador/conexion.php");
 
 $nombre = $_POST["nombre"];
 $email = $_POST["email"];

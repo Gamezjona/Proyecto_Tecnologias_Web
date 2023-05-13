@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['id_Cliente'])){
+    header("Location: ../Vista/index.html");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,9 +31,9 @@
                 <li><a href="#comida">Menu</a></li>
             </ul>
             <ul>
-                <li><a href="#diseño">Diseño</a></li>
                 <li><a href="#reservacion">Reservacion</a></li>
                 <li><a href="#mejores">Mejores Productos</a></li>
+                <li><a href="../Vista/cerrar.php">Cerrar Sesion</a></li>
             </ul>
         </nav>
 
@@ -164,17 +171,23 @@
             <div class="parrafoD">
                 <h3>Sebastian Galindo</h3>
                 <ul>
-                    <li><a href=""><i class="fa-brands fa-facebook" style="color: #005eff;"></i></a></li>
-                    <li><a href=""><i class="fa-brands fa-instagram" style="color: #ff00ea;"></i></a></li>
-                    <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"
+                                style="color: #005eff;"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"
+                                style="color: #ff00ea;"></i></a></li>
+                    <li><a href="https://www.google.com/intl/es-419/gmail/about/"><i
+                                class="fa-solid fa-envelope"></i></a></li>
                 </ul>
             </div>
             <div class="parrafoD">
                 <h3>Luiz Angel</h3>
                 <ul>
-                    <li><a href=""><i class="fa-brands fa-facebook" style="color: #005eff;"></i></a></li>
-                    <li><a href=""><i class="fa-brands fa-instagram" style="color: #ff00ea;"></i></a></li>
-                    <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"
+                                style="color: #005eff;"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"
+                                style="color: #ff00ea;"></i></a></li>
+                    <li><a href="https://www.google.com/intl/es-419/gmail/about/"><i
+                                class="fa-solid fa-envelope"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -208,27 +221,27 @@
         </div>
 
         <div class="reservacionN" id="formas">
-            <form class="formReserva" action="" method="post">
+            <form class="formReserva" action="../Controlador/registroReservado.php" method="post">
                 <h3>
                     Haga su reservacion
                 </h3>
                 <p>
-                    <select name="" class="s">
+                    <select name="tipoReservacion" class="s" >
                         <option value="" selected>Tipo de reservacion</option>
-                        <option value="">Desayuno</option>
-                        <option value="">Comida</option>
-                        <option value="">Cena</option>
-                        <option value="">Cumpleaños</option>
-                        <option value="">Dia especial</option>
+                        <option value="Desayuno">Desayuno</option>
+                        <option value="Comida">Comida</option>
+                        <option value="Cena">Cena</option>
+                        <option value="Cumpleaños">Cumpleaños</option>
+                        <option value="Dia especial">Dia especial</option>
 
                     </select>
                 </p>
                 <p>
-                    <input class="s" type="date" name="" id="">
-                    <input class="s" type="time" name="" id="">
+                    <input class="s" type="date" name="fecha" id="" >
+                    <input class="s" type="time" name="hora" id="" > 
                 </p>
                 <p>
-                    <select name="" class="s">
+                    <select name="personas" class="s" >
                         <option value="" selected>Numero de personas</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -241,22 +254,21 @@
                     </select>
                 </p>
                 <p>
-                    <select name="" class="s">
+                    <select name="habitacion" class="s" >
                         <option value="" selected>Tipo de habitacion</option>
-                        <option value="1">Grande</option>
-                        <option value="2">Mediana</option>
-                        <option value="3">Chica</option>
-                        <option value="4">Premium</option>
+                        <option value="Grande">Grande</option>
+                        <option value="Mediana">Mediana</option>
+                        <option value="Chica">Chica</option>
+                        <option value="Premium">Premium</option>
                     </select>
                 </p>
 
                 <p>
-                    <input class="s" id="comentario" type="text" name="" id="" placeholder="Comentario">
+                    <input class="s" id="comentario" type="text" name="comentario" id="" placeholder="Comentario">
                 </p>
 
                 <p>
-                    <!-- <input class="s" type="submit" value="Hacer pedido"> -->
-                    <input class="s" type="button" value="Hacer pedido">
+                    <input class="s" type="submit" value="Hacer pedido">
                 </p>
             </form>
         </div>
@@ -265,31 +277,51 @@
     <!-- Comidas mejores -->
 
     <section id="mejores">
-
-        <div id="tituloMejores">
-            <h3>Mejores Productos</h3>
-            <ul>
-                <li><a href="#desayunos"><i class="fa-brands fa-facebook"></i></a></li>
-                <li>Desayunos</li>
-                <li>Cenas</li>
-                <li>Dia especial</li>
+        <div id="menuMejores">
+            <ul id="menuUl">
+                <li class="minimenu" id="comidas">
+                    <div class="descrip">
+                        <figure>
+                            <img src="../Imagenes/p1.jpg" alt="">
+                        </figure>
+                        <p></p>
+                    </div>
+                </li>
+                <li class="minimenu" id="desayuno">
+                    <div class="descrip">
+                        <figure>
+                            <img src="../Imagenes/p2.jpg" alt="">
+                        </figure>
+                        <p></p>
+                    </div>
+                </li>
+                <li class="minimenu" id="cena">
+                    <div class="descrip">
+                        <figure>
+                            <img src="../Imagenes/p3.jpg" alt="">
+                        </figure>
+                        <p></p>
+                    </div>
+                </li>
+                <li class="minimenu" id="diaEspecial">
+                    <div class="descrip">
+                        <figure>
+                            <img src="../Imagenes/p4.jpg" alt="">
+                        </figure>
+                        <p></p>
+                    </div>
+                </li>
             </ul>
         </div>
 
-        <div id="menuMejores">
-
-            <div id="comidas">
-
-            </div>
-            <div id="desayunos">
-
-            </div>
-            <div id="cenas">
-
-            </div>
-            <div id="DiaEspecial">
-
-            </div>
+        <div id="tituloMejores">
+            <h3>Mejor Producto De La Semana</h3>
+            <ul>
+                <li><a href="#comidas">Comida</a></li>
+                <li><a href="#desayuno">Desayuno</a></li>
+                <li><a href="#cena">Cena</a></li>
+                <li><a href="#diaEspecial">Dia Especial</a></li>
+            </ul>
         </div>
 
     </section>
@@ -297,15 +329,29 @@
     <!-- Footer -->
 
     <section id="referencias">
-        <div class="pie">
+        <div class="pie" id="footerCon">
             <ul>
-                <li>l</li>
-                <li>2</li>
-                <li>3</li>
+                <li>
+                    <a href="https://www.facebook.com/">
+                        <i class="fa-brands fa-facebook" style="color: #00FFCA;"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/">
+                        <i class="fa-brands fa-instagram" style="color: #00FFCA;"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.google.com/intl/es-419/gmail/about/">
+                        <i class="fa-solid fa-envelope" style="color: #00FFCA;"></i>
+                    </a>
+                </li>
             </ul>
         </div>
-        <div class="pie">logotipo</div>
-        <div class="pie">empresa</div>
+        <div class="pie" id="footerLog"><img src="../Imagenes/logo.jpg" alt=""></div>
+        <div class="pie">
+            <h2>Los Amigos</h2>
+        </div>
     </section>
 </body>
 
