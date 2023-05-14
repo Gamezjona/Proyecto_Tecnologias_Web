@@ -22,7 +22,7 @@ if (!isset($_SESSION['id_Cliente'])) {
             }
 
         }else{
-            echo "Error email";
+            header("Location: ../Vista/errorEmail.html");
         }
     } else {
 

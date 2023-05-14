@@ -11,7 +11,8 @@ $contraseña = $_POST["contraseña"];
 $contraseña2 = $_POST["contraseña2"];
 
 $consulta = "SELECT nombreCliente FROM cliente WHERE nombreCliente = '$nombre'";
-$resultado=mysqli_query($conexion,$consulta);
+$resultado=mysqli_query($conexion,$consulta)or die("No se conecto");
+
 var_dump($resultado);
 $row  = mysqli_num_rows($resultado);//Numero de lineas 
 

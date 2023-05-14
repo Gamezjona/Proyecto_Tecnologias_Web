@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['id_Cliente'])){
-    header("Location: ../Vista/index.html");
+    header("Location: ../index.html");
 }
 ?>
 
@@ -13,6 +13,9 @@ if(!isset($_SESSION['id_Cliente'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Modelo/principal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Sigmar&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/eb8f9c6f22.js" crossorigin="anonymous"></script>
     <title>Cafeteria</title>
 </head>
@@ -226,7 +229,7 @@ if(!isset($_SESSION['id_Cliente'])){
                     Haga su reservacion
                 </h3>
                 <p>
-                    <select name="tipoReservacion" class="s" >
+                    <select name="tipoReservacion" class="s">
                         <option value="" selected>Tipo de reservacion</option>
                         <option value="Desayuno">Desayuno</option>
                         <option value="Comida">Comida</option>
@@ -237,11 +240,11 @@ if(!isset($_SESSION['id_Cliente'])){
                     </select>
                 </p>
                 <p>
-                    <input class="s" type="date" name="fecha" id="" >
-                    <input class="s" type="time" name="hora" id="" > 
+                    <input class="s" type="date" name="fecha" id="d">
+                    <input class="s" type="time" name="hora">
                 </p>
                 <p>
-                    <select name="personas" class="s" >
+                    <select id="n" name="personas" class="s">
                         <option value="" selected>Numero de personas</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -252,9 +255,7 @@ if(!isset($_SESSION['id_Cliente'])){
                         <option value="7">7</option>
                         <option value="8">8</option>
                     </select>
-                </p>
-                <p>
-                    <select name="habitacion" class="s" >
+                    <select name="habitacion" class="s">
                         <option value="" selected>Tipo de habitacion</option>
                         <option value="Grande">Grande</option>
                         <option value="Mediana">Mediana</option>
@@ -262,7 +263,6 @@ if(!isset($_SESSION['id_Cliente'])){
                         <option value="Premium">Premium</option>
                     </select>
                 </p>
-
                 <p>
                     <input class="s" id="comentario" type="text" name="comentario" id="" placeholder="Comentario">
                 </p>
@@ -284,7 +284,10 @@ if(!isset($_SESSION['id_Cliente'])){
                         <figure>
                             <img src="../Imagenes/p1.jpg" alt="">
                         </figure>
-                        <p></p>
+                        <div class="infomejores">
+                            <h3>Arroz De pollo</h3>
+                            <p>Lorem ipsum dolor sit amet. lo</p>
+                        </div>
                     </div>
                 </li>
                 <li class="minimenu" id="desayuno">
@@ -292,7 +295,10 @@ if(!isset($_SESSION['id_Cliente'])){
                         <figure>
                             <img src="../Imagenes/p2.jpg" alt="">
                         </figure>
-                        <p></p>
+                        <div class="infomejores">
+                            <h3>Almuerzo completo</h3>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
                     </div>
                 </li>
                 <li class="minimenu" id="cena">
@@ -300,7 +306,10 @@ if(!isset($_SESSION['id_Cliente'])){
                         <figure>
                             <img src="../Imagenes/p3.jpg" alt="">
                         </figure>
-                        <p></p>
+                        <div class="infomejores">
+                            <h3>Sopa Fria</h3>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
                     </div>
                 </li>
                 <li class="minimenu" id="diaEspecial">
@@ -308,7 +317,10 @@ if(!isset($_SESSION['id_Cliente'])){
                         <figure>
                             <img src="../Imagenes/p4.jpg" alt="">
                         </figure>
-                        <p></p>
+                        <div class="infomejores">
+                            <h3>Pastel de almendras</h3>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
                     </div>
                 </li>
             </ul>

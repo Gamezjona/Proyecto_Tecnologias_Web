@@ -1,13 +1,13 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: none;
     box-sizing: border-box;
 }
 
 body {
     color: white;
-    background-color: #05BFDB; 
+    background-color: #05BFDB;
+    font-family: 'Roboto', sans-serif, 'Sigmar', cursive;
     font-weight: 400;
     font-size: 16px;
     box-sizing: border-box;
@@ -16,10 +16,9 @@ body {
 /* Navegador */
 
 header {
-    height: 120px;
+    height: 100px;
     width: 100%;
     background-color: #0A4D68;
-    margin-bottom: 1px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,9 +35,9 @@ header h1 {
     margin-bottom: 10px;
 }
 
-header h1:hover{
+header h1:hover {
     color: #00FFCA;
-    font-size:50px;
+    font-size: 50px;
     cursor: default;
 }
 
@@ -66,13 +65,13 @@ header nav ul li {
     font-size: large;
 }
 
-header nav ul li a{
+header nav ul li a {
     transition: color 0.5s ease;
     color: white;
 }
 
 
-header nav ul li a:visited{
+header nav ul li a:visited {
     color: white;
 }
 
@@ -87,7 +86,7 @@ header nav ul li a:hover {
         height: 280px;
     }
 
-    header nav{
+    header nav {
         margin-bottom: 20px;
     }
 
@@ -113,7 +112,7 @@ header nav ul li a:hover {
         height: 320px;
     }
 
-    header nav{
+    header nav {
         margin-bottom: 20px;
     }
 
@@ -169,7 +168,7 @@ section {
     overflow: hidden;
 }
 
-.carrusel ul{
+.carrusel ul {
     display: flex;
     padding: 0;
     width: 400%;
@@ -177,7 +176,7 @@ section {
     animation: slide 24s infinite alternate ease-in-out;
 }
 
-.carrusel ul li{
+.carrusel ul li {
     list-style-type: none;
     width: 100%;
 }
@@ -187,29 +186,49 @@ section {
     height: 100%;
 }
 
-@keyframes slide{
-    0%{margin-left: 0%;}
-    20%{margin-left: 0%;}
-  
-    25%{margin-left: -100%;}
-    45%{margin-left: -100%;}
-  
-    50%{margin-left: -200%;}
-    70%{margin-left: -200%;}
-  
-    75%{margin-left: -300%;}
-    95%{margin-left: -300%;}
+@keyframes slide {
+    0% {
+        margin-left: 0%;
+    }
+
+    20% {
+        margin-left: 0%;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    95% {
+        margin-left: -300%;
+    }
 }
 
 @media(max-width: 767px) {
     .inicio {
         flex-direction: column;
-        height: 700px;
     }
 
     #apartado {
-        flex-basis: 30%;
         flex-direction: row;
+        flex-basis: 30%;
+        width: 100%;
     }
 
     #anuncio {
@@ -235,18 +254,21 @@ section {
     .carrusel {
         flex-basis: 70%;
     }
+
+
 }
 
 @media(max-width: 480px) {
     .inicio {
         display: flex;
         flex-direction: column;
-        height: 700px;
+        height: 500px;
     }
 
     #anuncio img {
         display: none;
     }
+
 }
 
 /* Nosotros */
@@ -259,13 +281,13 @@ section {
     height: 478px;
 }
 
-#infoNosotros{
+#infoNosotros {
     color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 25px;
-    flex-basis: 40%;
+    flex-basis: 30%;
 }
 
 .nosotrosIn p {
@@ -273,39 +295,49 @@ section {
     text-align: justify;
 }
 
-#carrusel2{
+#carrusel2 {
     overflow: hidden;
     flex-basis: 50%;
     box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.50);
     border-radius: 10px;
 }
 
-#carrusel2 ul{
-    display: flex; 
+#carrusel2 ul {
+    display: flex;
     padding: 0;
     width: 200%;
     height: 100%;
     animation: car 10s infinite alternate ease-in-out;
 }
 
-#carrusel2 ul li{
+#carrusel2 ul li {
     list-style-type: none;
     width: 100%;
 }
 
-#carrusel2 img{
+#carrusel2 img {
     width: 100%;
     height: 100%;
 }
 
-@keyframes car{
-    0%{margin-left: 0%;}
-    40%{margin-left: 0%;}
-  
-    50%{margin-left: -100%;}
-    100%{margin-left: -100%;}
+@keyframes car {
+    0% {
+        margin-left: 0%;
+    }
+
+    40% {
+        margin-left: 0%;
+    }
+
+    50% {
+        margin-left: -100%;
+    }
+
+    100% {
+        margin-left: -100%;
+    }
 }
- 
+
 
 @media screen and (max-width: 767px) {
     #nosotros {
@@ -314,6 +346,11 @@ section {
 
     .nosotrosIn {
         margin: 0;
+        flex-basis: 30%;
+    }
+
+    #carrusel2 {
+        flex-basis: 70%;
     }
 }
 
@@ -322,7 +359,7 @@ section {
         height: 400px;
     }
 
-    #infoNosotros{
+    #infoNosotros {
         font-size: 15px;
     }
 }
@@ -347,7 +384,7 @@ section {
     color: white;
 }
 
-#tituloComida h2{
+#tituloComida h2 {
     text-align: center;
 }
 
@@ -379,14 +416,14 @@ section {
     border-radius: 10px;
 }
 
-#comidaCarrusel ul li img{
+#comidaCarrusel ul li img {
     height: 100%;
     width: 100%;
     border-radius: 10px;
     transition: all 500ms ease-out;
 }
 
-.capa{
+.capa {
     position: absolute;
     top: 0;
     width: 100%;
@@ -396,27 +433,43 @@ section {
     visibility: hidden;
     text-align: center;
 }
-.capa h3{
+
+.capa h3 {
     transition: all 500ms ease-out;
 }
-.capa p{
+
+.capa p {
     width: 100%;
 }
 
-#comidaCarrusel ul li:hover > .capa{
+#comidaCarrusel ul li:hover>.capa {
     opacity: 1;
     visibility: visible;
     background-color: rgba(0, 0, 0, 0.404);
     cursor: pointer;
 }
 
-#comidaCarrusel ul li:hover > .capa h3{
+#comidaCarrusel ul li:hover>.capa h3 {
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
-#comidaCarrusel ul li:hover > img{
+#comidaCarrusel ul li:hover>img {
     transform: scale(1.3);
+}
+
+@media screen and (max-width: 767px) {
+
+    #comida {
+        height: 500px;
+    }
+
+    #comidaCarrusel {}
+
+    #comidaCarrusel ul li {
+        height: 50%;
+    }
+
 }
 
 
@@ -439,7 +492,7 @@ section {
 }
 
 #diseñadores {
-    background-color:#088395 ;
+    background-color: #088395;
     height: 200px;
     width: 95%;
     display: flex;
@@ -501,6 +554,7 @@ section {
 .reservacionN {
     display: flex;
     background-color: rgba(70, 71, 67, 0.473);
+    border-radius: 20px;
     height: 600px;
     width: 100%;
     margin: 15px;
@@ -518,11 +572,11 @@ section {
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
+    border-radius: 20px;
 }
 
-.info h3,p{
+.info h3,p {
     width: 80%;
-
 }
 
 .subcontactosRes {
@@ -534,13 +588,14 @@ section {
     justify-content: space-between;
     width: 80%;
     margin: 20px 20px;
+    border-radius: 20px;
 }
 
-.subcontactosRes img{
+.subcontactosRes img {
     height: 100%;
 }
 
-.subcontactosRes p{
+.subcontactosRes p {
     text-align: center;
 }
 
@@ -554,23 +609,36 @@ section {
     height: 100%;
     justify-content: center;
     align-items: center;
+    border-radius: 20px;
 }
 
 .formReserva h3 {
     text-align: center;
-    margin: 20px 0;
+    margin: 30px 0;
+}
+
+.formReserva p {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#d {
+    margin-right: 10px;
+}
+
+#n {
+    margin-right: 10px;
 }
 
 .s {
     text-align: center;
     appearance: none;
-    margin: 10px 0;
-    margin-left: 20px;
-    width: 80%;
-    padding: 8px;
     height: 40px;
     border: none;
     border-radius: 15px;
+    width: 40%;
 }
 
 #comentario {
@@ -594,7 +662,7 @@ section {
         height: 600px;
     }
 
-    #cont{
+    #cont {
         flex-direction: row;
     }
 
@@ -609,6 +677,10 @@ section {
 
     #informs {
         height: 30%;
+    }
+
+    .subcontactosRes img {
+        height: 40%;
     }
 
 }
@@ -627,6 +699,8 @@ section {
     background-color: #088395;
     width: 50%;
     height: 30%;
+    border-radius: 20px;
+    color: #fff;
 }
 
 #tituloMejores h3 {
@@ -646,22 +720,34 @@ section {
     margin-left: 20px;
 }
 
+#tituloMejores a{
+    color: #fff;
+    font-size: 25px;
+    transition: all 0.5s ease;
+}
+
+#tituloMejores a:hover{
+    color: #00FFCA;
+    font-size: 40px;
+}
+
 /*  */
 
 #menuMejores {
     overflow: hidden;
-    width: 80%;
+    width: 70%;
     height: 50%;
+    border-radius: 20px;
 }
 
-#menuUl{
+#menuUl {
     height: 100%;
     width: 100%;
     list-style-type: none;
     overflow: hidden;
 }
 
-.minimenu{
+.minimenu {
     width: 100%;
     height: 100%;
     display: flex;
@@ -669,38 +755,61 @@ section {
     justify-content: center;
 }
 
-.descrip{
+.descrip {
+    background-color: #474141;
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.descrip figure{
+.descrip figure {
     height: 100%;
     flex-basis: 40%;
 }
 
-.descrip figure img{
+.descrip figure img {
     width: 100%;
     height: 100%;
 }
 
-.descrip p{
-    background-color: brown;
+.infomejores {
+    width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-#comidas{
+.infomejores h3 {
+    height: 100%;
+    width: 100%;
+    flex-basis: 40%;
+    margin-top: 20px;
 }
 
-#desayuno{
+.infomejores p {
+    height: 100%;
+    width: 100%;
 }
 
-#cena{
-}
 
-#diaEspecial{
+#comidas {}
+
+#desayuno {}
+
+#cena {}
+
+#diaEspecial {}
+
+
+@media screen and (max-width: 768px) {
+    #mejores {
+        height: 500px;
+    }
 }
 
 /* Referencias */
@@ -724,7 +833,7 @@ section {
     height: 60%;
 }
 
-#footerCon ul{
+#footerCon ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
@@ -733,18 +842,18 @@ section {
     height: 100%;
 }
 
-#footerCon ul li{
-    transition:font-size 0.7s ease;
+#footerCon ul li {
+    transition: font-size 0.7s ease;
     width: 100%;
     text-align: center;
     font-size: 50px;
 }
 
-#footerCon ul li:hover{
+#footerCon ul li:hover {
     font-size: 70px;
 }
 
-#footerLog img{
+#footerLog img {
     height: 100%;
     border-radius: 50%;
 }
