@@ -1,5 +1,5 @@
 <?php
-include("../Controlador/conexion.php");
+include("conexion.php");
 
 $nombre = $_POST["nombre"];
 $email = $_POST["email"];
@@ -23,7 +23,7 @@ if($contraseña == $contraseña2){
     }else {
         $con = "INSERT INTO cliente VALUES (NULL,'$nombre','$email','$telefon','$fecha','$genero','$pais','$contraseña')";
         $resultado=mysqli_query($conexion,$con);
-        header("Location: ../Vista/inicio.html");
+        header("Location: ../Vista/inicio.php");
     }
 }else{
     header("Location: ../Vista/errorContraseña.html");

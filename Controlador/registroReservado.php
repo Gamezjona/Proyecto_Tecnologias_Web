@@ -28,20 +28,20 @@ if(!isset($_SESSION['id_Cliente'])){
     $personasReservacion = $_POST['personas'];
     $habitacionReservacion = $_POST['habitacion'];
     $comentario = $_POST['comentario'];
-    session_start();
     $idCliente = $_SESSION['id_Cliente'];
-/*     session_start();
-    echo $_SESSION['id_Cliente'] . "<br>"; */
-
+    // session_start();
+    echo $_SESSION['id_Cliente'] . "<br>";
     $insertarReserva = "INSERT INTO `reservacion` (`id_reservacion`, `tipo_reservacion`, `fecha_reservacion`, `hora_reservacion`, `personas_reservacion`, `habitacion_reservacion`, `comentario_reservacion`, `idCliente`)
      VALUES (NULL, '$tipoReservacion', ' $fechaReservacion', '$horaReservacion', '$personasReservacion', '$habitacionReservacion', '$comentario', '$idCliente') ";
     $resultadoReserva = mysqli_query($conexion,$insertarReserva) or die("No se conecto");
-    $idReserva = "SELECT * FROM reservacion WHERE idCliente = '$idCliente'";
+
+
+    $idReserva = "SELECT * FROM reservacion WHERE idCliente = '$idCliente' AND hora_reservacion = '$horaReservacion' AND fecha_reservacion ='$fechaReservacion'";
     $resultadoIdReserva = mysqli_query($conexion,$idReserva) or die("No se conecto");
     $rowReserva = mysqli_fetch_assoc($resultadoIdReserva);
     ?>
 
-    <section id="revicion">
+     <section id="revicion">
         <h2>Reservacion exitosa</h2>
         <?php
         echo "<p> Id pedido: " . $rowReserva['id_reservacion'] . "</p>";

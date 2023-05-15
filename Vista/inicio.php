@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['id_Cliente'])){
+if (!isset($_SESSION['id_Cliente'])) {
     header("Location: ../index.html");
 }
 ?>
@@ -15,7 +15,8 @@ if(!isset($_SESSION['id_Cliente'])){
     <link rel="stylesheet" href="../Modelo/principal.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Sigmar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Sigmar&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/eb8f9c6f22.js" crossorigin="anonymous"></script>
     <title>Cafeteria</title>
 </head>
@@ -83,11 +84,47 @@ if(!isset($_SESSION['id_Cliente'])){
         </div>
     </section>
 
+    <!-- Diseñarodes -->
+
+    <section id="diseño">
+        <!-- Titolo diseño -->
+        <div id="tituloDiseño">
+            <h2>
+                Diseñadores
+            </h2>
+        </div>
+
+        <div id="diseñadores">
+            <div class="parrafoD">
+                <h3>Sebastian Galindo</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"
+                                style="color: #005eff;"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"
+                                style="color: #ff00ea;"></i></a></li>
+                    <li><a href="https://www.google.com/intl/es-419/gmail/about/"><i
+                                class="fa-solid fa-envelope"></i></a></li>
+                </ul>
+            </div>
+            <div class="parrafoD">
+                <h3>Luiz Angel</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"
+                                style="color: #005eff;"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"
+                                style="color: #ff00ea;"></i></a></li>
+                    <li><a href="https://www.google.com/intl/es-419/gmail/about/"><i
+                                class="fa-solid fa-envelope"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <!-- Menu -->
     <section id="comida">
         <!-- titulo comida -->
         <div id="tituloComida">
-            <h2>Tipo de alimentos</h2>
+            <h2>Tipo de alimentos que se ofrecen</h2>
         </div>
         <!-- carrucel -->
         <section id="comidaCarrusel">
@@ -160,42 +197,6 @@ if(!isset($_SESSION['id_Cliente'])){
         </section>
     </section>
 
-    <!-- Diseñarodes -->
-
-    <section id="diseño">
-        <!-- Titolo diseño -->
-        <div id="tituloDiseño">
-            <h2>
-                Diseñadores
-            </h2>
-        </div>
-
-        <div id="diseñadores">
-            <div class="parrafoD">
-                <h3>Sebastian Galindo</h3>
-                <ul>
-                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"
-                                style="color: #005eff;"></i></a></li>
-                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"
-                                style="color: #ff00ea;"></i></a></li>
-                    <li><a href="https://www.google.com/intl/es-419/gmail/about/"><i
-                                class="fa-solid fa-envelope"></i></a></li>
-                </ul>
-            </div>
-            <div class="parrafoD">
-                <h3>Luiz Angel</h3>
-                <ul>
-                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"
-                                style="color: #005eff;"></i></a></li>
-                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"
-                                style="color: #ff00ea;"></i></a></li>
-                    <li><a href="https://www.google.com/intl/es-419/gmail/about/"><i
-                                class="fa-solid fa-envelope"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
     <!-- Reservacion/Informacion -->
 
     <section id="reservacion">
@@ -229,22 +230,24 @@ if(!isset($_SESSION['id_Cliente'])){
                     Haga su reservacion
                 </h3>
                 <p>
-                    <select name="tipoReservacion" class="s">
+                    <select name="tipoReservacion" class="s" required>
                         <option value="" selected>Tipo de reservacion</option>
-                        <option value="Desayuno">Desayuno</option>
-                        <option value="Comida">Comida</option>
-                        <option value="Cena">Cena</option>
+                        <option value="Cafe">Sala de Cafe</option>
+                        <option value="Sala comedor">Sala Para Comer</option>
+                        <option value="Sala estudio">Sala de Estudio</option>
                         <option value="Cumpleaños">Cumpleaños</option>
                         <option value="Dia especial">Dia especial</option>
-
                     </select>
                 </p>
                 <p>
-                    <input class="s" type="date" name="fecha" id="d">
-                    <input class="s" type="time" name="hora">
+                    <?php
+                    include("../Controlador/hora.php");
+                    ?>
+                    <input class="s" type="date" min="<?= $fechaActual; ?>" name="fecha" id="d" required>
+                    <input class="s" type="time" name="hora" required>
                 </p>
                 <p>
-                    <select id="n" name="personas" class="s">
+                    <select id="n" name="personas" class="s" required>
                         <option value="" selected>Numero de personas</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -255,7 +258,7 @@ if(!isset($_SESSION['id_Cliente'])){
                         <option value="7">7</option>
                         <option value="8">8</option>
                     </select>
-                    <select name="habitacion" class="s">
+                    <select name="habitacion" class="s" required>
                         <option value="" selected>Tipo de habitacion</option>
                         <option value="Grande">Grande</option>
                         <option value="Mediana">Mediana</option>
@@ -330,9 +333,9 @@ if(!isset($_SESSION['id_Cliente'])){
             <h3>Mejor Producto De La Semana</h3>
             <ul>
                 <li><a href="#comidas">Comida</a></li>
-                <li><a href="#desayuno">Desayuno</a></li>
-                <li><a href="#cena">Cena</a></li>
-                <li><a href="#diaEspecial">Dia Especial</a></li>
+                <li><a href="#desayuno">Cafe</a></li>
+                <li><a href="#cena">Dia Especial</a></li>
+                <li><a href="#diaEspecial">Cumpleaños</a></li>
             </ul>
         </div>
 
