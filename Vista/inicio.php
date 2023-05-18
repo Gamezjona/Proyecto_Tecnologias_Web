@@ -1,8 +1,8 @@
-<!-- <?php
+<?php
 session_start();
 if (!isset($_SESSION['id_Cliente'])) {
     header("Location: ../index.html");
-} -->
+}
 ?>
 
 <!DOCTYPE html>
@@ -134,8 +134,8 @@ if (!isset($_SESSION['id_Cliente'])) {
                     <div class="capa">
                         <h3>Cafe</h3>
                         <p>
-                            Lorem ipsum dolor sit amet,
-                            consectetur adipisicing elit. Minima, illum.
+                            Cafe de diferentes sacores y preparado por
+                            expertos
                         </p>
                     </div>
                 </li>
@@ -144,8 +144,7 @@ if (!isset($_SESSION['id_Cliente'])) {
                     <div class="capa">
                         <h3>Comida</h3>
                         <p>
-                            Lorem ipsum dolor sit amet,
-                            consectetur adipisicing elit. Minima, illum.
+                            Platillos suculentos y muy deliciosos.
                         </p>
                     </div>
                 </li>
@@ -156,8 +155,8 @@ if (!isset($_SESSION['id_Cliente'])) {
                     <div class="capa">
                         <h3>Almuerzo</h3>
                         <p>
-                            Lorem ipsum dolor sit amet,
-                            consectetur adipisicing elit. Minima, illum.
+                            Almuerzos muy nutritivos y completos al gusto
+                            del cliente.
                         </p>
                     </div>
                 </li>
@@ -166,8 +165,8 @@ if (!isset($_SESSION['id_Cliente'])) {
                     <div class="capa">
                         <h3>Postres</h3>
                         <p>
-                            Lorem ipsum dolor sit amet,
-                            consectetur adipisicing elit. Minima, illum.
+                            Una variedad de postres para cualquier tipo de
+                            ocasion
                         </p>
                     </div>
                 </li>
@@ -178,8 +177,8 @@ if (!isset($_SESSION['id_Cliente'])) {
                     <div class="capa">
                         <h3>Bebidas</h3>
                         <p>
-                            Lorem ipsum dolor sit amet,
-                            consectetur adipisicing elit. Minima, illum.
+                            Bebidas de diferentes sabores y tamaños
+                            a si como vinos y sodas.
                         </p>
                     </div>
                 </li>
@@ -188,8 +187,8 @@ if (!isset($_SESSION['id_Cliente'])) {
                     <div class="capa">
                         <h3>Fiesta</h3>
                         <p>
-                            Lorem ipsum dolor sit amet,
-                            consectetur adipisicing elit. Minima, illum.
+                            Ofrecemos diferentes tipos de alimentos para fiestas
+                            como refrescos, botana y pasteles.
                         </p>
                     </div>
                 </li>
@@ -240,11 +239,11 @@ if (!isset($_SESSION['id_Cliente'])) {
                     </select>
                 </p>
                 <p>
-                   <!--  <?php
+                    <?php
                     include("../Controlador/hora.php");
-                    ?>  
-                    min="<?= $fechaActual; ?>"-->
-                    <input class="s" type="date"   name="fecha" id="d" required>
+                    ?>
+
+                    <input class="s" type="date" min="<?= $fechaActual; ?>" name="fecha" id="d" required>
                     <input class="s" type="time" name="hora" required>
                 </p>
                 <p>
@@ -290,7 +289,10 @@ if (!isset($_SESSION['id_Cliente'])) {
                         </figure>
                         <div class="infomejores">
                             <h3>Arroz De pollo</h3>
-                            <p>Lorem ipsum dolor sit amet. lo</p>
+                            <p>
+                                "Platillo de arroz casero con pollo
+                                bañado en mole de guajolote"
+                            </p>
                         </div>
                     </div>
                 </li>
@@ -301,7 +303,10 @@ if (!isset($_SESSION['id_Cliente'])) {
                         </figure>
                         <div class="infomejores">
                             <h3>Almuerzo completo</h3>
-                            <p>Lorem ipsum dolor sit amet.</p>
+                            <p>
+                                "Contiene un cafe capuchino y un platillo 
+                                al gusto del cliente y con pan ilimitado"
+                            </p>
                         </div>
                     </div>
                 </li>
@@ -312,7 +317,7 @@ if (!isset($_SESSION['id_Cliente'])) {
                         </figure>
                         <div class="infomejores">
                             <h3>Sopa Fria</h3>
-                            <p>Lorem ipsum dolor sit amet.</p>
+                            <p>"Sopa traida desde Italia acompañada con un vino al gusto"</p>
                         </div>
                     </div>
                 </li>
@@ -323,7 +328,7 @@ if (!isset($_SESSION['id_Cliente'])) {
                         </figure>
                         <div class="infomejores">
                             <h3>Pastel de almendras</h3>
-                            <p>Lorem ipsum dolor sit amet.</p>
+                            <p>"Suculento pastel de almendras sabor chocolate"</p>
                         </div>
                     </div>
                 </li>
