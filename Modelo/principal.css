@@ -26,8 +26,6 @@ header {
 
 #logo {
     height: 100%;
-    display: flex;
-    flex-direction: row;
 }
 
 header h1 {
@@ -84,14 +82,20 @@ header nav ul li a:hover {
     header {
         flex-direction: column;
         height: 280px;
+        justify-content: space-around;
     }
 
     header nav {
         margin-bottom: 20px;
+        justify-content: space-between;
     }
 
-    header nav ul {
-        margin-bottom: 15px;
+    header nav ul li{
+        font-size: 15px;
+    }
+
+    #logo{
+        height: 50%;
     }
 
     #logo img {
@@ -102,10 +106,11 @@ header nav ul li a:hover {
 }
 
 @media screen and (max-width: 480px) {
-    nav {
+    header nav {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 70%;
     }
 
     header {
@@ -117,7 +122,9 @@ header nav ul li a:hover {
     }
 
     header nav ul {
-        margin-bottom: 15px;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     header nav ul li {
@@ -291,7 +298,7 @@ section {
 }
 
 .nosotrosIn p {
-    width: 70%;
+    width: 100%;
     text-align: justify;
 }
 
@@ -344,13 +351,13 @@ section {
         flex-direction: column;
     }
 
-    .nosotrosIn {
-        margin: 0;
-        flex-basis: 30%;
+    .nosotrosIn p{
+        font-size: 20px;
+        width: 90%;
     }
 
     #carrusel2 {
-        flex-basis: 70%;
+        flex-basis: 80%;
     }
 }
 
@@ -359,8 +366,87 @@ section {
         height: 400px;
     }
 
-    #infoNosotros {
+    .nosotrosIn p{
         font-size: 15px;
+        width: 90%;
+    }
+
+    #infoNosotros {
+        margin:10px 0;
+    }
+
+    #carrusel2 {
+        flex-basis: 80%;
+    }
+}
+
+/* Diseño */
+
+#diseño {
+    height: 450px;
+    flex-direction: column;
+    color: black;
+}
+
+#tituloDiseño {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    height: 100px;
+    width: 50%;
+    border-radius: 20px;
+}
+
+#diseñadores {
+    background-color: #088395;
+    height: 200px;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.parrafoD {
+    text-align: center;
+    background-color: #fff;
+    height: 100px;
+    width: 40%;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+.parrafoD h3 {
+    margin-top: 15px;
+}
+
+.parrafoD ul {
+    display: flex;
+    justify-content: center;
+}
+
+.parrafoD ul li {
+    float: left;
+    list-style-type: none;
+    margin: 0 12px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 480px) {
+    #tituloDiseño{
+        width: 90%;
+    }
+
+    #diseñadores {
+        flex-direction: column;
+        height: 300px;
+    }
+
+    .parrafoD {
+        height: 100px;
+        width: 70%;
     }
 }
 
@@ -458,86 +544,46 @@ section {
     transform: scale(1.3);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px){
+    #comidaCarrusel ul li {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #tituloComida{
+        width: 90%;
+    }
 
     #comida {
         height: 500px;
     }
 
-    #comidaCarrusel {}
+    #comidaCarrusel {
+        flex-direction: column;
+        height: 350px;
+    }
+
+    #comidaCarrusel ul{
+        height: 100px;
+    }
 
     #comidaCarrusel ul li {
-        height: 50%;
+        height: 98%;
+        width: 22%;
     }
 
-}
-
-
-/* Diseño */
-
-#diseño {
-    height: 450px;
-    flex-direction: column;
-    color: black;
-}
-
-#tituloDiseño {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: aliceblue;
-    height: 100px;
-    width: 50%;
-    border-radius: 20px;
-}
-
-#diseñadores {
-    background-color: #088395;
-    height: 200px;
-    width: 95%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: 20px;
-}
-
-.parrafoD {
-    text-align: center;
-    background-color: #fff;
-    height: 100px;
-    width: 40%;
-    padding: 8px;
-    border-radius: 20px;
-}
-
-.parrafoD h3 {
-    margin-top: 15px;
-}
-
-.parrafoD ul {
-    display: flex;
-    justify-content: center;
-}
-
-.parrafoD ul li {
-    float: left;
-    list-style-type: none;
-    margin: 0 12px;
-    margin-top: 10px;
-}
-
-@media screen and (max-width: 480px) {
-    #diseñadores {
-        flex-direction: column;
-        height: 300px;
+    #comidaCarrusel ul li img{
+        height: 100%;
     }
 
-    .parrafoD {
-        height: 80px;
-        width: 70%;
-        padding: 8px;
+    .capa h3{
+        font-size: 11px;
     }
+    .capa p {
+        font-size: 9px;
+    }
+
 }
 
 /* .parrafoD:hover{
@@ -676,11 +722,25 @@ section {
     }
 
     #informs {
-        height: 30%;
+        height: 40%;
+    }
+
+    .subcontactosRes{
+        margin: 1px;
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .subcontactosRes p{
+        width: 100%;
+        font-size: 12px;
     }
 
     .subcontactosRes img {
-        height: 40%;
+        height: 20%;
+        margin-bottom: 15px;
     }
 
 }
@@ -797,20 +857,62 @@ section {
 }
 
 
-#comidas {}
-
-#desayuno {}
-
-#cena {}
-
-#diaEspecial {}
-
-
 @media screen and (max-width: 768px) {
     #mejores {
         height: 500px;
     }
+    
+    #tituloMejores{
+        width: 90%;
+    }
+
+    #tituloMejores a{
+        transition: all 0.5s ease;
+    }
+
+    #menuMejores {
+        overflow: hidden;
+        width: 90%;
+        height: 50%;
+        border-radius: 20px;
+    }
 }
+
+@media screen and (max-width: 480px){
+    #tituloMejores ul{
+        width: 100%;
+    }
+
+    #tituloMejores ul li {
+        margin-left: 10px;
+    }
+    #tituloMejores a{
+        transition: all 0.5s ease;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    #tituloMejores a:hover{
+        color: #00FFCA;
+        font-size: 15px;
+    }
+
+    .infomejores p {
+        height: 100%;
+        width: 100%;
+    }
+    .minimenu{
+        width: 100%;
+    }
+    .descrip{
+        width: 100%;
+    }
+    .descrip figure {
+        height: 100%;
+        flex-basis: 100%;
+    }
+}
+
 
 /* Referencias */
 
@@ -831,6 +933,10 @@ section {
     width: 80%;
     margin: 5px;
     height: 60%;
+}
+
+.pie h2{
+    font-size: 20px;
 }
 
 #footerCon ul {
@@ -855,5 +961,32 @@ section {
 
 #footerLog img {
     height: 100%;
+    width: auto;
     border-radius: 50%;
+}
+
+@media (max-width:480px) {
+    #footerCon{
+        flex-direction: column;
+    }
+
+    #footerCon ul{
+        flex-direction: column;
+    }
+
+    #footerCon ul li {
+        transition: font-size 0.7s ease;
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    
+    #footerCon ul li:hover {
+        font-size: 70px;
+    }
+    
+    #footerLog img {
+        height: 80%;
+        width: auto;
+        border-radius: 50%;
+    }
 }
